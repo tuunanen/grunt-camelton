@@ -152,13 +152,6 @@ Running "camelton:verboseOutput" (camelton) task
   /Users/username/path/to/destination-1.json
 ```
 
-## Roadmap
-
-### Version 1.0
-* Unit tests using nodeunit
-* Project published to npm
-* Usage examples
-
 ## Changelog
 
 Please see [changelog](https://github.com/tuunanen/grunt-camelton/blob/master/CHANGELOG.md).
