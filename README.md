@@ -27,7 +27,13 @@ with this line of JavaScript:
 grunt.loadNpmTasks('grunt-camelton');
 ```
 
-## The "camelton" task
+## Camelton task
+
+Run this task with the `grunt camelton` command.
+
+```shell
+$ grunt camelton
+```
 
 ### Overview
 In your project's Gruntfile, add a section named `camelton` to the data object
@@ -42,7 +48,7 @@ grunt.initConfig({
     your_target: {
       // Target-specific file lists and/or options go here.
     },
-  },
+  }
 });
 ```
 
@@ -74,7 +80,77 @@ Verbose output.
 
 ### Usage Examples
 
-Coming soon.
+In order to understand how `camelton` works, please see the [usage examples](https://github.com/tuunanen/camelton/#usage-examples)
+from the project's README page.
+
+#### Basic configuration examples
+
+```js
+camelton: {
+  main: {
+    files: [
+      // Default options.
+      {src: 'source.json', dest: 'destination-1.json'},
+
+      // Sort option on ("asc").
+      {sort: 'asc', src: 'source.json', dest: 'destination-1.json'},
+
+      // "prune" option on.
+      {prune: true, src: 'source.json', dest: 'destination-1.json'}
+    ]
+  }
+}
+```
+
+#### Multiple destination files
+
+```js
+camelton: {
+  main: {
+    src: 'source.json',
+    dest: ['destination-1.json', 'destination-2.json']
+  }
+}
+```
+
+```shell
+$ grunt camelton
+Running "camelton:main" (camelton) task
+
+✔ Modified: 2 files.
+```
+
+#### Default output vs. verbose output
+
+```js
+camelton: {
+  defaultOutput: {
+    files: {
+      'destination-1.json': 'source.json'
+    }
+  },
+  verboseOutput: {
+    options: {
+      verbose: true
+    },
+    files: {
+      'destination-1.json': 'source.json'
+    }
+  }
+}
+```
+
+```shell
+$ grunt camelton
+Running "camelton:defaultOutput" (camelton) task
+
+✔ Modified: 1 file.
+
+Running "camelton:verboseOutput" (camelton) task
+
+✔ Modified: 1 file.
+  /Users/username/path/to/destination-1.json
+```
 
 ## Roadmap
 
