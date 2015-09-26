@@ -14,10 +14,8 @@ how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as
 install and use Grunt plugins. Once you're familiar with that process, you may
 install this plugin with this command:
 
-```shell
-$ git clone git@github.com:tuunanen/grunt-camelton.git
-$ cd grunt-camelton
-$ npm install
+```sh
+npm install grunt-camelton
 ```
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile
@@ -31,8 +29,8 @@ grunt.loadNpmTasks('grunt-camelton');
 
 Run this task with the `grunt camelton` command.
 
-```shell
-$ grunt camelton
+```sh
+grunt camelton
 ```
 
 ### Overview
@@ -124,8 +122,8 @@ camelton: {
 }
 ```
 
-```shell
-$ grunt camelton
+```sh
+grunt camelton
 Running "camelton:main" (camelton) task
 
 ✔ Modified: 2 files.
@@ -151,8 +149,8 @@ camelton: {
 }
 ```
 
-```shell
-$ grunt camelton
+```sh
+grunt camelton
 Running "camelton:defaultOutput" (camelton) task
 
 ✔ Modified: 1 file.
