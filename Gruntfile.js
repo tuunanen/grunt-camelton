@@ -43,7 +43,8 @@ module.exports = function(grunt) {
           {src: srcDestFile, dest: './tmp/destination-default.json'},
           {src: srcDestFile, dest: './tmp/destination-sort-asc.json'},
           {src: srcDestFile, dest: './tmp/destination-sort-desc.json'},
-          {src: srcDestFile, dest: './tmp/destination-prune.json'}
+          {src: srcDestFile, dest: './tmp/destination-prune.json'},
+          {src: srcDestFile, dest: './tmp/destination-placeholder.json'}
         ]
       }
     },
@@ -78,6 +79,14 @@ module.exports = function(grunt) {
         },
         files: {
           'tmp/destination-prune.json': srcFile
+        }
+      },
+      placeholder: {
+        options: {
+          placeholder: true
+        },
+        files: {
+          'tmp/destination-placeholder.json': srcFile
         }
       }
     },

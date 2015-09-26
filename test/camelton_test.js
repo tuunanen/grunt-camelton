@@ -38,5 +38,14 @@ exports.camelton = {
     test.deepEqual(actual, expected,
       'File generated correctly with option "prune" on.');
     test.done();
+  },
+  placeholder: function(test) {
+    var actual = grunt.file.readJSON('./tmp/destination-placeholder.json'),
+      expected = grunt.file.readJSON('./test/expected/destination-placeholder.json');
+
+    test.expect(1);
+    test.deepEqual(actual, expected,
+      'File generated correctly with option "placeholder" on.');
+    test.done();
   }
 };

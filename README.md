@@ -70,6 +70,14 @@ Values: `true`, `false`
 
 Prune extra properties found in destination objects.
 
+#### options.placeholder
+
+Type: `boolean`  
+Default: `false`  
+Values: `true`, `false`
+
+Add source object key as a value for empty destination object properties.
+
 #### options.verbose
 
 Type: `boolean`  
@@ -96,7 +104,10 @@ camelton: {
       {sort: 'asc', src: 'source.json', dest: 'destination-1.json'},
 
       // "prune" option on.
-      {prune: true, src: 'source.json', dest: 'destination-1.json'}
+      {prune: true, src: 'source.json', dest: 'destination-1.json'},
+
+      // "placeholder" option on.
+      {placeholder: true, src: 'source.json', dest: 'destination-1.json'}
     ]
   }
 }

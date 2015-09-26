@@ -7,6 +7,7 @@ module.exports = function(grunt) {
   grunt.registerMultiTask('camelton', 'Generate and synchronize data skeletons across files.', function() {
     var options = this.options({
       prune: false,
+      placeholder: false,
       verbose: false
     });
 
