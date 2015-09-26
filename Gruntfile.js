@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = function(grunt) {
-  var srcFile = './test/fixtures/source.json',
-      srcDestFile = './test/fixtures/destination.json';
+  var srcFile = './test/fixtures/source.json';
+  var srcDestFile = './test/fixtures/destination.json';
 
   // Project configuration.
   grunt.initConfig({
