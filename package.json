@@ -5,7 +5,8 @@
   "homepage": "https://github.com/tuunanen/grunt-camelton",
   "author": "tuunanen",
   "scripts": {
-    "test": "./node_modules/.bin/grunt test"
+    "test": "./node_modules/.bin/grunt test",
+    "lint": "./node_modules/.bin/grunt lint"
   },
   "repository": {
     "type": "git",
